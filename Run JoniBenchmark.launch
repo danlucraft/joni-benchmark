@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/test-joni/src/ch/mollusca/benchmarking/BenchmarkRunner.java"/>
+<listEntry value="/joni_benchmark/src/ch/mollusca/benchmarking/BenchmarkRunner.java"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="1"/>
@@ -11,5 +11,5 @@
 </listAttribute>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="ch.mollusca.benchmarking.BenchmarkRunner"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="JoniBenchmark"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="test-joni"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="joni_benchmark"/>
 </launchConfiguration>
