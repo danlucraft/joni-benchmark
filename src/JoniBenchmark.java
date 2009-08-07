@@ -13,22 +13,25 @@ public class JoniBenchmark {
 	}
 	
 	@Benchmark(times = 200)
-	public void benchmarkSomething(){
-		int i = 1000000000;
-		while(i-- > 0){
-			int a = i << 33;
-		}
+	public void benchmarkSubstringMatch(){
+		TestJoni.test_re("foo", "  foo  ");
 	}
-	
-	@Benchmark
-	public void benchmarkSomethingElse(){
-		try{
-			Thread.sleep(20);
-		} catch(Exception e){
-			
-		}
+
+	@Benchmark(times = 200)
+	public void benchmarkDateExact(){
+		TestJoni.test_re("\\d\\d\\d\\d-\\d\\d-\\d\\d", "2009-08-54");
 	}
-	
+
+	@Benchmark(times = 200)
+	public void benchmarkDateInsideString(){
+		TestJoni.test_re("\\d\\d\\d\\d-\\d\\d-\\d\\d", "  2009-08-54xx  ");
+	}
+
+	@Benchmark(times = 200)
+	public void benchmarkAlternation(){
+		TestJoni.test_re("((class|module|def|end) \\w+ < )+", "  asdf asdf asd class agrg < def foo < module ads <");
+	}
+
 	@After
 	public void teardown(){
 		// runs after each 
